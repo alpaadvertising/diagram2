@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Diagram for Regular Expression 2</title>
+  <style>
+    svg {
+      margin: 20px;
+      border: 1px solid #ccc;
+    }
+    circle {
+      fill: #f9f9f9;
+      stroke: #000;
+      stroke-width: 2;
+    }
+    text {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    path {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+</head>
+<body>
+  <h1>State Diagram for Regular Expression 2</h1>
+  <svg width="1000" height="400">
+    <!-- Arrowhead definition -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#000"></polygon>
+      </marker>
+    </defs>
+
+    <!-- States -->
+    <circle cx="50" cy="200" r="25"></circle>
+    <text x="42" y="205">q0</text>
+    <circle cx="200" cy="200" r="25"></circle>
+    <text x="192" y="205">q1</text>
+    <circle cx="350" cy="200" r="25"></circle>
+    <text x="342" y="205">q2</text>
+    <circle cx="500" cy="100" r="25"></circle>
+    <text x="492" y="105">q3</text>
+    <circle cx="500" cy="200" r="25"></circle>
+    <text x="492" y="205">q4</text>
+    <circle cx="500" cy="300" r="25"></circle>
+    <text x="492" y="305">q5</text>
+    <circle cx="650" cy="200" r="25" stroke="green" stroke-width="3"></circle>
+    <text x="642" y="205">qf</text>
+
+    <!-- Transitions -->
+    <path d="M75,200 L175,200" marker-end="url(#arrowhead)"></path>
+    <text x="120" y="190">a</text>
+
+    <path d="M225,200 L325,200" marker-end="url(#arrowhead)"></path>
+    <text x="270" y="190">b</text>
+
+    <path d="M375,200 L475,200" marker-end="url(#arrowhead)"></path>
+    <text x="420" y="190">c*</text>
+
+    <path d="M525,100 L625,200" marker-end="url(#arrowhead)"></path>
+    <text x="560" y="140">ab+</text>
+
+    <path d="M525,200 L625,200" marker-end="url(#arrowhead)"></path>
+    <text x="580" y="190">c</text>
+
+    <path d="M525,300 L625,200" marker-end="url(#arrowhead)"></path>
+    <text x="580" y="260">ab*</text>
+  </svg>
+</body>
+</html>
